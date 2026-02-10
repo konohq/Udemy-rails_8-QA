@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # README
 
 This README would normally document whatever steps are necessary to get the
@@ -22,3 +23,6 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+=======
+# Udemy-rails_8-QA
+>>>>>>> 2b042f6eba8a088cd62c9b8128c8dccc990cd761
