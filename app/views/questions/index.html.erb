@@ -1,4 +1,13 @@
 <h1>Questions</h1>
+<% if user_signed_in? %>
+  <%= form_with url: destroy_user_session_path, method: :delete do %>
+  <%= submit_tag "ログアウト" %>
+  <% end %>
+<% else %>
+  <%= link_to "ログイン", new_user_session_path %>
+  <%= link_to "サインアップ", new_user_registration_path %>
+   <% end %>
+
 <%= link_to "new", new_question_path %>
 <table>
   <tr>

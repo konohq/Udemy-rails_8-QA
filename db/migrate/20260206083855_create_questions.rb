@@ -4,6 +4,7 @@ class CreateQuestions < ActiveRecord::Migration[8.0]
       t.string :name
       t.string :title
       t.text :content
+      t.bigint "user_id"
 
       t.timestamps
     end
