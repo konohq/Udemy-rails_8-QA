@@ -1,6 +1,6 @@
 class QuestionsController < ApplicationController
   # ログインをしていないとログイン画面に遷移
-  before_action :authenticate_user!, only: [ :new, :show, :create, :edit, :update, :destroy ]
+  before_action :authenticate_user!, only: [ :new, :create, :edit, :update, :destroy ]
   # 編集、更新、削除は本人のみ
   before_action :correct_user, only: [ :edit, :update, :destroy ]
   # 質問一覧表示

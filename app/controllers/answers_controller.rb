@@ -1,10 +1,12 @@
 class AnswersController < ApplicationController
+  #回答者がログインをしていないと回答を送れない
+  before_action :authenticate_user!, only: [ :edit, :create, :update, :destroy ]
   # 回答の登録
   def create
     @question = Question.find(params[:question_id])
     @question.answers.create(answer_params)
     redirect_to question_path(@question)
-end
+  end
 
   # 回答の削除
   def destroy
