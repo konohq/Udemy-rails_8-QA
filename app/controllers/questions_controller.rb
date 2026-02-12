@@ -1,8 +1,8 @@
 class QuestionsController < ApplicationController
-  #ログインをしていないとログイン画面に遷移
-  before_action :authenticate_user!, only: [:new, :show, :create, :edit, :update, :destroy]
-  #編集、更新、削除は本人のみ
-  before_action :correct_user, only: [:edit, :update, :destroy]
+  # ログインをしていないとログイン画面に遷移
+  before_action :authenticate_user!, only: [ :new, :show, :create, :edit, :update, :destroy ]
+  # 編集、更新、削除は本人のみ
+  before_action :correct_user, only: [ :edit, :update, :destroy ]
   # 質問一覧表示
   def index
     @questions = Question.all
@@ -15,11 +15,11 @@ class QuestionsController < ApplicationController
   end
 
   # 質問の作成
-  def new 
+  def new
     @question = Question.new
   end
 
-  #質問の登録
+  # 質問の登録
   def create
     @question = current_user.questions.build(question_params)
     if @question.save
@@ -29,12 +29,12 @@ class QuestionsController < ApplicationController
     end
   end
 
-  #質問の編集
+  # 質問の編集
   def edit
     @question = Question.find(params[:id])
   end
 
-  #質問の更新
+  # 質問の更新
   def update
     @question = Question.find(params[:id])
     if @question.update(question_params)
@@ -44,7 +44,7 @@ class QuestionsController < ApplicationController
     end
   end
 
-  #質問の削除
+  # 質問の削除
   def destroy
     @question = Question.find(params[:id])
     @question.destroy
@@ -70,5 +70,3 @@ class QuestionsController < ApplicationController
     params.require(:question).permit(:title, :name, :content)
   end
 end
-
-
