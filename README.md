@@ -1,28 +1,20 @@
 <<<<<<< HEAD
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Q&Aアプリ
 
-Things you may want to cover:
+## 概要
+Udemy のハンズオンをベースに作成した Q&A アプリです。  
+自分で調べながらログイン・ログアウト・サインアップ機能を追加し、  
+ログインしたユーザーのみ質問・回答の投稿が可能で、投稿者だけ編集・削除できるように実装しました。
 
-* Ruby version
+## 使用技術
+- Ruby 4.0.1
+- Rails 8.0.4
+- SQLite3
+- Git/GitHub
 
-* System dependencies
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
 =======
 # Udemy-rails_8-QA
 >>>>>>> 2b042f6eba8a088cd62c9b8128c8dccc990cd761
