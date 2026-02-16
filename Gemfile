@@ -63,4 +63,4 @@ group :test do
 end
 gem "fiddle"
 gem "devise"
-gem "minitest", "~> 5.22"
+gem "minitest", "~> 6.0"
