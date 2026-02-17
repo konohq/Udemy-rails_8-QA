@@ -7,9 +7,9 @@
 one:
   name: Test User
   email: one@example.com
-  password_digest: <%= BCrypt::Password.create('password') %>
+  password_digest: <%= User.new(password: 'password').password_digest %>
 
 two:
   name: Another User
   email: two@example.com
-  password_digest: <%= BCrypt::Password.create('password') %>
+  password_digest: <%= User.new(password: 'password').password_digest %>
