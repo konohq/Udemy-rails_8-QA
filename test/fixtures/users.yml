@@ -7,9 +7,9 @@
 one:
   name: Test User
   email: one@example.com
-  password_digest: <%= User.new(password: 'password').password_digest %>
+  password_digest: $2a$12$kWHfSCu8rbwMd4J9SbDSZO8nmR01fvUfyzA0ywJTyESfhLGgWsG7u
 
 two:
   name: Another User
   email: two@example.com
-  password_digest: <%= User.new(password: 'password').password_digest %>
+  password_digest: $2a$12$kWHfSCu8rbwMd4J9SbDSZO8nmR01fvUfyzA0ywJTyESfhLGgWsG7u
