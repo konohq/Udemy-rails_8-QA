@@ -7,9 +7,11 @@
 one:
   name: Test User
   email: one@example.com
-  password_digest: $2a$12$kWHfSCu8rbwMd4J9SbDSZO8nmR01fvUfyzA0ywJTyESfhLGgWsG7u
+  password_digest: <%= Devise::Encryptor.digest(User, 'password') %>
+
 
 two:
   name: Another User
   email: two@example.com
-  password_digest: $2a$12$kWHfSCu8rbwMd4J9SbDSZO8nmR01fvUfyzA0ywJTyESfhLGgWsG7u
+  password_digest: <%= Devise::Encryptor.digest(User, 'password') %>
+
